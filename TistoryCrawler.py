@@ -24,7 +24,6 @@ class TistoryCrawler(BlogCrawler):
                     cleaned_html = element_html[start_index:end_index]
                     # Use regular expression to remove HTML tags
                     clean_text = re.sub('<.*?>', '', cleaned_html)
-                    print(clean_text)
                     return clean_text
                 
         return ""
@@ -39,4 +38,4 @@ if __name__ == "__main__":
 
     # 블로그 글 내용 출력
     blog_content = crawler.content
-    # print(blog_content)
+    print(blog_content)

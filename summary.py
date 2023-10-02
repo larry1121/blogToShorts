@@ -1,20 +1,21 @@
 import re
 from tqdm import tqdm
+from config import OPENAI_API_KEY
 import openai
 import fitz # pip install --upgrade pymupdf or pip install PyMuPDF
 import time
 
 
-def summary():
+def summary(blog_content):
     global summary_list
 
-    openai.api_key = 'sk-본인의 openai API키를 입력해주세요'
+    openai.api_key = OPENAI_API_KEY
 
-    ############### pdf to text #############################
-    book_path = 'paper_list/001.pdf'
+    # ############### pdf to text #############################
+    # book_path = 'paper_list/001.pdf'
 
-    doc = fitz.open(book_path)
-    #########################################################
+    # doc = fitz.open(book_path)
+    # #########################################################
 
     start_pno = 0
     summarize_every = 1
